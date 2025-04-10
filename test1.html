@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Page 1 (Protected)</title>
+    <link rel="stylesheet" href="css/style.css"> <!-- Optional -->
+</head>
+<body> <!-- Body initially hidden by protect-page.js -->
+    <h1>Test Page 1</h1>
+    <p>This is confidential content for Test Page 1.</p>
+    <p>You should only see this if you are logged in AND have 'canAccessTest1' set to true in Firestore.</p>
+    <p>Random text: Lorem ipsum dolor sit amet.</p>
+
+    <p><a href="test.html">Back to Test Area</a></p>
+    <p><a href="index.html">Back to Login</a></p>
+
+
+    <!-- Firebase SDKs -->
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore-compat.js"></script>
+
+    <!-- Your Scripts -->
+    <script src="js/firebase-config.js"></script>
+    <script src="js/permissions.js"></script>
+    <script src="js/protect-page.js"></script>
+    <script>
+        // Tell protectPage which permission key to check for THIS page
+        protectPage('canAccessTest1');
+    </script>
+
+</body>
+</html>
