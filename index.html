@@ -3,36 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login Page</title>
-    <link rel="stylesheet" href="css/style.css"> <!-- Optional -->
+    <title>Home Page</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            text-align: center;
+            padding-top: 50px;
+        }
+        .button {
+            display: inline-block;
+            padding: 15px 30px;
+            font-size: 1.2em;
+            color: white;
+            background-color: #007bff;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .button:hover {
+            background-color: #0056b3;
+        }
+    </style>
 </head>
 <body>
-    <h1>Welcome</h1>
 
-    <div id="login-section">
-        <p>Please log in to access the site.</p>
-        <button id="login-google">Login with Google</button>
-        <p id="login-error" class="error-message"></p>
-    </div>
+    <h1>Welcome!</h1>
+    <p>Click the button to explore.</p>
 
-    <div id="logged-in-section" style="display: none;">
-        <p>Welcome, <span id="user-email"></span>!</p>
-        <p>You are logged in.</p>
-        <!-- The "Enter Site" button will be added here by JS if authorized -->
-        <div id="enter-site-placeholder"></div>
-        <button id="logout">Logout</button>
-    </div>
-
-    <!-- Firebase SDKs -->
-    <!-- Use the 'compat' versions for easier syntax matching the examples -->
-    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app-compat.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth-compat.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore-compat.js"></script>
-
-    <!-- Your Scripts -->
-    <script src="js/firebase-config.js"></script>
-    <script src="js/permissions.js"></script>
-    <script src="js/auth.js"></script>
+    <!-- Link styled as a button -->
+    <a href="family.html" class="button">Go Deeper</a>
 
 </body>
 </html>
